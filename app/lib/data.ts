@@ -1,35 +1,19 @@
 export const projects = [
     {
-      title: "React Reserve",
-      subtitle: "MERN Stack",
+      title: "Ignite Shop",
+      subtitle: "Build with Next.js, TypeScript, Tailwind",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "Uma loja de camisas integrada com a API do stripe, com finalização de compra",
       image: "./project-1.gif",
-      link: "https://reactbootcamp.com",
+      link: "https://github.com/CaiioCarvalho",
     },
     {
-      title: "React Tracks",
-      subtitle: "React and Python",
+      title: "DT Money",
+      subtitle: "Build with React.js, TypeScript, CSS modules",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "Um dashboard para registro de valores, onde possível excluir ou criar novos registros",
       image: "./project-2.gif",
-      link: "https://reactbootcamp.com",
-    },
-    {
-      title: "DevChat",
-      subtitle: "React and Firebase",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./project-3.gif",
-      link: "https://reactbootcamp.com",
-    },
-    {
-      title: "Epic Todo App",
-      subtitle: "React Hooks",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./project-4.gif",
-      link: "https://reactbootcamp.com",
+      link: "https://github.com/CaiioCarvalho",
     },
   ];
 
@@ -58,5 +42,6 @@ export const projects = [
     "GitHub",
     "HTML",
     "CSS",
-    "Figma"
+    "Figma",
+    "Tailwind CSS"
   ];
