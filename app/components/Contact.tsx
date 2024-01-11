@@ -2,14 +2,24 @@
 
 import React, { FormEvent } from 'react'
 
-
 const Contact = () => {
     const [name, setName] = React.useState('');
     const [email, setEmail] = React.useState('');
     const [message, setMessage] = React.useState('');
+    const [submiting, setSubmiting] = React.useState(false)
+
+    function resetFields() {
+      setName('')
+      setEmail('')
+      setMessage('')
+      setSubmiting(false)
+      console.log('Response succeeded!')
+      alert('Sua Mensagem foi enviada com successo')
+    }
 
       function handleSubmit(e: FormEvent) {
         e.preventDefault()
+        setSubmiting(true)
         console.log('Sending')
         let data = {
         name,
@@ -25,13 +35,8 @@ const Contact = () => {
           body: JSON.stringify(data)
         }).then((res) => {
           console.log('Response received')
-          console.log(res)
           if (res.status === 200) {
-            setName('')
-            setEmail('')
-            setMessage('')
-            console.log('Response succeeded!')
-            alert('Sua Mensagem foi enviada com successo')
+            resetFields()
           }
         })
       }
@@ -88,6 +93,7 @@ const Contact = () => {
               type="text"
               required
               id="name"
+              value={name}
               onChange={(e) => setName(e.target.value)}
               name="name"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -101,6 +107,7 @@ const Contact = () => {
               required
               type="email"
               id="email"
+              value={email}
               name="email"
               onChange={(e) => setEmail(e.target.value)}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -114,6 +121,7 @@ const Contact = () => {
             </label>
             <textarea
               id="message"
+              value={message}
               name="message"
               onChange={(e) => setMessage(e.target.value)}
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
@@ -121,6 +129,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
+            disabled={submiting}
             onClick={(e)=>{handleSubmit(e)}}
             className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             Submit
