@@ -1,5 +1,3 @@
-
-import { redirect } from 'next/navigation';
 import { Resend } from 'resend';
 
 export async function POST(req: Request, res: Response) {
@@ -13,6 +11,6 @@ resend.emails.send({
   subject: `New Job Aplicattion`,
   html: `<p>O ${name} mandou uma mensagem para você<strong> ${email}</strong><div>${message}</div</p>`
 });
-
-redirect(`https://meu-repo-alpha.vercel.app/success`)
+ return new Response(JSON.stringify('OK'))
 }
+

@@ -31,6 +31,7 @@ const Contact = () => {
             setEmail('')
             setMessage('')
             console.log('Response succeeded!')
+            alert('Sua Mensagem foi enviada com successo')
           }
         })
       }
@@ -85,6 +86,7 @@ const Contact = () => {
             </label>
             <input
               type="text"
+              required
               id="name"
               onChange={(e) => setName(e.target.value)}
               name="name"
@@ -96,6 +98,7 @@ const Contact = () => {
               Email
             </label>
             <input
+              required
               type="email"
               id="email"
               name="email"
