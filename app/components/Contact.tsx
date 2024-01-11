@@ -4,18 +4,9 @@ import React, { FormEvent } from 'react'
 
 
 const Contact = () => {
-    const [name, setName] = React.useState("");
-    const [email, setEmail] = React.useState("");
-    const [message, setMessage] = React.useState("");
-    const [submitted, setSubmitted] = React.useState(false)
-
-    // function encode(data: dataProps) {
-    //     return Object.keys(data)
-    //       .map(
-    //         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-    //       )
-    //       .join("&");
-    //   }
+    const [name, setName] = React.useState('');
+    const [email, setEmail] = React.useState('');
+    const [message, setMessage] = React.useState('');
 
       function handleSubmit(e: FormEvent) {
         e.preventDefault()
@@ -23,7 +14,7 @@ const Contact = () => {
         let data = {
         name,
         email,
-        message
+        message,
         }
         fetch('/api/contact', {
           method: 'POST',
@@ -34,12 +25,12 @@ const Contact = () => {
           body: JSON.stringify(data)
         }).then((res) => {
           console.log('Response received')
+          console.log(res)
           if (res.status === 200) {
-            console.log('Response succeeded!')
-            setSubmitted(true)
             setName('')
             setEmail('')
             setMessage('')
+            console.log('Response succeeded!')
           }
         })
       }

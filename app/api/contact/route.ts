@@ -1,34 +1,18 @@
 
+import { redirect } from 'next/navigation';
+import { Resend } from 'resend';
 
-export async function POST(req: Request, res:Request) {
+export async function POST(req: Request, res: Response) {
   const { name, email, message} = await req.json()
-  // console.log(name)
-  require('dotenv').config()
   const PASSWORD = process.env.password
-  let nodemailer = require('nodemailer')
-  const transporter = nodemailer.createTransport({
-    port: 465,
-    host: "smtp.gmail.com",
-    auth: {
-      user: 'generatoremail3@gmail.com',
-      pass: 'CDF785c7cc!',
-    },
-    secure: true,
-  })
-  const mailData = {
-    from: 'demo email',
-    to: 'your email',
-    subject: `Message From ${name}`,
-    text: message + " | Sent from: " + email,
-    html: `<div>${message}</div><p>Sent from:
-    ${email}</p>`
-  }
-  transporter.sendMail(mailData, function (err: any, info: any) {
-    if(err)
-      console.log(err)
-    else
-      console.log(info)
-  })
+const resend = new Resend(PASSWORD);
 
-    return new Response(JSON.stringify({message: 'ok'}))
-  }
+resend.emails.send({
+  from: 'onboarding@resend.dev',
+  to: 'caiohenrique043@gmail.com',
+  subject: `New Job Aplicattion`,
+  html: `<p>O ${name} mandou uma mensagem para você<strong> ${email}</strong><div>${message}</div</p>`
+});
+
+redirect(`https://meu-repo-alpha.vercel.app/success`)
+}
