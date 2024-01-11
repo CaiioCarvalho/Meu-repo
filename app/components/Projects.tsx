@@ -2,6 +2,7 @@ import React from 'react'
 import { projects } from '../lib/data';
 import { CodeBracketIcon } from '@heroicons/react/16/solid';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Projects = () => {
   return (
@@ -19,16 +20,17 @@ const Projects = () => {
         </div>
         <div className="flex flex-wrap -m-4">
           {projects.map((project) => (
-            <a
+            <Link
+              target='_blank'
               href={project.link}
               key={project.title}
-              className="sm:w-1/2 w-100 p-4">
+              className="sm:w-1/2 w-100 p-4 rounded-md">
               <div className="flex relative">
                 <Image
                   alt="gallery"
-                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  className="absolute inset-0 w-full h-full rounded-md object-cover object-center shadow-xl"
                   src={`/${project.image}`}
-                  height={90}
+                  height={200}
                   width={520}
                 />
                 <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
@@ -41,7 +43,7 @@ const Projects = () => {
                   <p className="leading-relaxed">{project.description}</p>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

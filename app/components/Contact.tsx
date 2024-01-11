@@ -7,6 +7,7 @@ const Contact = () => {
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [message, setMessage] = React.useState("");
+    const [submitted, setSubmitted] = React.useState(false)
 
     // function encode(data: dataProps) {
     //     return Object.keys(data)
@@ -16,16 +17,32 @@ const Contact = () => {
     //       .join("&");
     //   }
 
-    //   function handleSubmit(e: FormEvent) {
-    //     e.preventDefault();
-    //     fetch("/", {
-    //       method: "POST",
-    //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //       body: encode({ "form-name": "contact", name, email, message }),
-    //     })
-    //       .then(() => alert("Message sent!"))
-    //       .catch((error) => alert(error));
-    //   }
+      function handleSubmit(e: FormEvent) {
+        e.preventDefault()
+        console.log('Sending')
+        let data = {
+        name,
+        email,
+        message
+        }
+        fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        }).then((res) => {
+          console.log('Response received')
+          if (res.status === 200) {
+            console.log('Response succeeded!')
+            setSubmitted(true)
+            setName('')
+            setEmail('')
+            setMessage('')
+          }
+        })
+      }
 
   return (
     <section id="contact" className="relative">
@@ -110,6 +127,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
+            onClick={(e)=>{handleSubmit(e)}}
             className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             Submit
           </button>

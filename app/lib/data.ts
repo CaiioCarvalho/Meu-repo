@@ -4,7 +4,7 @@ export const projects = [
       subtitle: "Build with Next.js, TypeScript, Tailwind",
       description:
         "Uma loja de camisas integrada com a API do stripe, com finalização de compra",
-      image: "./project-1.gif",
+      image: "./pro-2.svg",
       link: "https://github.com/CaiioCarvalho",
     },
     {
@@ -12,7 +12,7 @@ export const projects = [
       subtitle: "Build with React.js, TypeScript, CSS modules",
       description:
         "Um dashboard para registro de valores, onde possível excluir ou criar novos registros",
-      image: "./project-2.gif",
+      image: "./pro-1.svg",
       link: "https://github.com/CaiioCarvalho",
     },
   ];
