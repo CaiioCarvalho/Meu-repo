@@ -1,8 +1,8 @@
-import { Contact, Navbar, About,  Projects,  Skills,  Testimonials } from './components'
+import { Contact, Navbar, About, Projects, Skills } from './components'
 
 export default function Home() {
   return (
-    <main className="text-gray-400 bg-gray-900 body-font">
+    <main className="body-font bg-gray-900 text-gray-400">
       <Navbar />
       <About />
       <Projects />

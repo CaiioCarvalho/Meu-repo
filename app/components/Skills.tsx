@@ -1,27 +1,27 @@
 import React from 'react'
-import { skills } from "../lib/data";
-import { CheckBadgeIcon, CpuChipIcon } from '@heroicons/react/16/solid';
+import { skills } from '../lib/data'
+import { CheckBadgeIcon, CpuChipIcon } from '@heroicons/react/16/solid'
 
 const Skills = () => {
   return (
     <section id="skills">
-      <div className="container px-5 py-10 mx-auto">
-        <div className="text-center mb-20">
-          <CpuChipIcon className="w-10 inline-block mb-4" />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-4">
+      <div className="container mx-auto px-5 py-10">
+        <div className="mb-20 text-center">
+          <CpuChipIcon className="mb-4 inline-block w-10" />
+          <h1 className="title-font mb-4 text-3xl font-medium text-white sm:text-4xl">
             Skills &amp; Tecnologias
           </h1>
-          <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            Algumas tecnologias de que tenho domínio e continuo me aperfeiçoando.
-            Atualmente também buscando aprender mais sobre o back-end, estudando node.js,
-            tipos de requisições e SQL.
+          <p className="mx-auto text-base leading-relaxed lg:w-3/4 xl:w-2/4">
+            Algumas tecnologias de que tenho domínio e continuo me
+            aperfeiçoando. Atualmente também buscando aprender mais sobre o
+            back-end, estudando node.js, tipos de requisições e SQL.
           </p>
         </div>
-        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+        <div className="-mx-2 flex flex-wrap sm:mx-auto sm:mb-2 lg:w-4/5">
           {skills.map((skill) => (
-            <div key={skill} className="p-2 sm:w-1/2 w-full">
-              <div className="bg-gray-800 rounded flex p-4 h-full items-center">
-                <CheckBadgeIcon className="text-green-400 w-6 h-6 flex-shrink-0 mr-4" />
+            <div key={skill} className="w-full p-2 sm:w-1/2">
+              <div className="flex h-full items-center rounded bg-gray-800 p-4">
+                <CheckBadgeIcon className="mr-4 h-6 w-6 flex-shrink-0 text-green-400" />
                 <span className="title-font font-medium text-white">
                   {skill}
                 </span>
