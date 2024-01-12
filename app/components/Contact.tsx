@@ -51,7 +51,8 @@ export default function Contact() {
             Entre em contato
           </h2>
           <p className="mb-5 leading-relaxed">
-            Se deseja fazer alguma proposta, utilize o formulário abaixo.
+            As mensagens enviadas por aqui são armazenadas em um banco de dados
+            da Vercel. Responderei o mais breve possível.
           </p>
           <div className="mb-4">
             <div className="relative">
@@ -63,7 +64,7 @@ export default function Contact() {
                 name="nome"
                 type="text"
                 aria-describedby="nome-error"
-                placeholder="Informe seu nome"
+                placeholder="Diga seu nome"
                 className="w-full rounded border border-gray-700 bg-gray-800 px-3 py-1 text-base leading-8 text-gray-100 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900"
               />
             </div>
@@ -111,7 +112,7 @@ export default function Contact() {
                 id="custoMessage"
                 name="custoMessage"
                 aria-describedby="custoMessage-error"
-                placeholder=""
+                placeholder="Helo world"
                 className="w-full rounded border border-gray-700 bg-gray-800 px-3 py-1 text-base leading-8 text-gray-100 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900"
               />
             </div>

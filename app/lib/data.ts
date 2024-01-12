@@ -44,4 +44,5 @@ export const skills = [
   'CSS',
   'Figma',
   'Tailwind CSS',
+  'SQL',
 ]
