@@ -10,18 +10,19 @@ const About = () => {
           <h1 className="title-font mb-4 text-3xl font-medium text-white sm:text-4xl">
             Olá, eu me chamo Caio.
             <br className="hidden lg:inline-block" />
-            Sou fascinado pelo desenvovimento web
+            Desenvolvedor Full Stack
           </h1>
           <p className="mb-8 leading-relaxed">
-            A cada dia que passa aprendo uma coisa nova do mundo do
-            desenvolvimento e isso me faz querer continuar aprendendo.
+            Pronto para desenvolver aplicações front-end e full stack. Este
+            portifófio tem integração com o back-end que me permite armazenar as
+            mensagens enviadas pelo formulário de contato.
           </p>
           <div className="flex justify-center">
             <Link
               href="#contact"
               className="inline-flex rounded border-0 bg-green-500 px-6 py-2 text-lg text-white hover:bg-green-600 focus:outline-none"
             >
-              Entrar em contato
+              Entre em contato
             </Link>
             <Link
               href="#projects"

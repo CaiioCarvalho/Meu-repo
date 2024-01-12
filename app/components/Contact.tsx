@@ -10,6 +10,7 @@ export default function Contact() {
     message: '',
   }
   const [state, dispatch] = useFormState(newMessage, initialState)
+
   return (
     <form action={dispatch} id="contact" name="contact2" className="relative">
       <div className="container mx-auto flex flex-wrap px-5 py-10 sm:flex-nowrap">
@@ -71,7 +72,10 @@ export default function Contact() {
             <div id="nome-error" aria-live="polite" aria-atomic="true">
               {state.errors?.nome &&
                 state.errors.nome.map((error: string) => (
-                  <p className="mt-2 text-sm text-red-500" key={error}>
+                  <p
+                    className="mt-1 animate-bounce text-sm text-red-500"
+                    key={error}
+                  >
                     {error}
                   </p>
                 ))}
@@ -94,7 +98,10 @@ export default function Contact() {
             <div id="email-error" aria-live="polite" aria-atomic="true">
               {state.errors?.email &&
                 state.errors.email.map((error: string) => (
-                  <p className="mt-2 text-sm text-red-500" key={error}>
+                  <p
+                    className="mt-1 animate-bounce text-sm text-red-500"
+                    key={error}
+                  >
                     {error}
                   </p>
                 ))}
@@ -113,21 +120,13 @@ export default function Contact() {
                 name="custoMessage"
                 aria-describedby="custoMessage-error"
                 placeholder="Helo world"
-                className="w-full rounded border border-gray-700 bg-gray-800 px-3 py-1 text-base leading-8 text-gray-100 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900"
+                className="min-h-20 w-full resize-none rounded border border-gray-700 bg-gray-800 px-3 py-1 text-base leading-8 text-gray-100 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900"
               />
-            </div>
-            <div id="custoMessage-error" aria-live="polite" aria-atomic="true">
-              {state.errors?.custoMessage &&
-                state.errors.custoMessage.map((error: string) => (
-                  <p className="mt-2 text-sm text-red-500" key={error}>
-                    {error}
-                  </p>
-                ))}
             </div>
           </div>
           <button
             type="submit"
-            className="rounded border-0 bg-indigo-500 px-6 py-2 text-lg text-white hover:bg-indigo-600 focus:outline-none"
+            className="rounded border-0 bg-indigo-500 px-6 py-2 text-lg text-white ring-indigo-500 hover:bg-indigo-600 focus:outline-none active:ring-2"
           >
             Submit
           </button>

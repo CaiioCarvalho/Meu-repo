@@ -13,8 +13,8 @@ const Skills = () => {
           </h1>
           <p className="mx-auto text-base leading-relaxed lg:w-3/4 xl:w-2/4">
             Algumas tecnologias de que tenho domínio e continuo me
-            aperfeiçoando. Atualmente também buscando aprender mais sobre o
-            back-end, estudando node.js, tipos de requisições e SQL.
+            aperfeiçoando. Atualmente tenho utilizado mais o Next.js,
+            TypeScript, Tailwind e SQL.
           </p>
         </div>
         <div className="-mx-2 flex flex-wrap sm:mx-auto sm:mb-2 lg:w-4/5">

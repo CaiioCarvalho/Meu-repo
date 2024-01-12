@@ -6,10 +6,10 @@ import { z } from 'zod'
 
 const FormSchema = z.object({
   nome: z.string().min(2, {
-    message: 'Informe seu nome',
+    message: '* Informe seu nome.',
   }),
   email: z.string().email({
-    message: 'Informe um e-mail válido.',
+    message: '* Informe um e-mail válido.',
   }),
   custoMessage: z.string().min(0),
 })
@@ -33,7 +33,7 @@ export async function newMessage(prevState: State, formData: FormData) {
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
-      message: 'Missing Fields. Failed to Create Invoice.',
+      message: 'Not allowed',
     }
   }
   const { nome, email, custoMessage } = validatedFields.data

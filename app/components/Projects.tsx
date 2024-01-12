@@ -11,7 +11,7 @@ const Projects = () => {
         <div className="mb-20 flex w-full flex-col">
           <CodeBracketIcon className="mx-auto mb-4 inline-block w-10" />
           <h1 className="title-font mb-4 text-3xl font-medium text-white sm:text-4xl">
-            Aplicações que já implementei
+            Aplicações desenvolvidas
           </h1>
           <p className="mx-auto text-base leading-relaxed lg:w-2/3">
             Algumas pequenas aplicações que desenvolvi recentemente, clicando
