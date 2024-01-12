@@ -3,6 +3,6 @@ import Navbar from './Navbar'
 import Projects from './Projects'
 import Skills from './Skills'
 import About from './About'
-import Testimonials from './Testimonials'
+import Footer from './Footer'
 
-export { Contact, Navbar, Projects, Skills, About, Testimonials }
+export { Contact, Navbar, Projects, Skills, About, Footer }
