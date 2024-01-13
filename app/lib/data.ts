@@ -35,14 +35,12 @@ export const testimonials = [
 ]
 
 export const skills = [
-  'JavaScript',
-  'TypeScript',
-  'React.js',
-  'Next.js',
-  'GitHub',
-  'HTML',
-  'CSS',
-  'Figma',
-  'Tailwind CSS',
-  'SQL',
+  { name: 'Next.js', logo: '/next.ico' },
+  { name: 'TypeScript', logo: '/typescript.png' },
+  { name: 'React.js', logo: '/react.png' },
+  { name: 'SQL', logo: '/sql.png' },
+  { name: 'Tailwind CSS', logo: '/tailwind.png' },
+  { name: 'JavaScript', logo: '/javascript.jpg' },
+  { name: 'GitHub', logo: '/git.svg' },
+  { name: 'HTML', logo: '/html.png' },
 ]

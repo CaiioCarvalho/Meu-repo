@@ -5,7 +5,7 @@ import React from 'react'
 
 const Success = () => {
   return (
-    <section>
+    <section className="h-screen bg-gray-900">
       <div className="container mx-auto px-5 py-10 text-center">
         <CheckCheck className="mb-4 inline-block h-20 w-20 text-green-500" />
         <h1 className="title-font mb-12 text-3xl font-medium text-white sm:text-4xl">

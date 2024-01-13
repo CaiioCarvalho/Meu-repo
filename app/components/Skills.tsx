@@ -1,6 +1,7 @@
 import React from 'react'
 import { skills } from '../lib/data'
-import { CheckBadgeIcon, CpuChipIcon } from '@heroicons/react/16/solid'
+import { CpuChipIcon } from '@heroicons/react/16/solid'
+import Image from 'next/image'
 
 const Skills = () => {
   return (
@@ -19,11 +20,17 @@ const Skills = () => {
         </div>
         <div className="-mx-2 flex flex-wrap sm:mx-auto sm:mb-2 lg:w-4/5">
           {skills.map((skill) => (
-            <div key={skill} className="w-full p-2 sm:w-1/2">
+            <div key={skill.name} className="w-full p-2 sm:w-1/2">
               <div className="flex h-full items-center rounded bg-gray-800 p-4">
-                <CheckBadgeIcon className="mr-4 h-6 w-6 flex-shrink-0 text-green-400" />
+                <Image
+                  width={24}
+                  height={24}
+                  src={skill.logo}
+                  alt=""
+                  className="mr-4 flex-shrink-0"
+                />
                 <span className="title-font font-medium text-white">
-                  {skill}
+                  {skill.name}
                 </span>
               </div>
             </div>

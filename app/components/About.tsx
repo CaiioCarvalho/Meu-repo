@@ -10,10 +10,10 @@ const About = () => {
           <h1 className="title-font mb-4 text-3xl font-medium text-white sm:text-4xl">
             Olá, eu me chamo Caio.
             <br className="hidden lg:inline-block" />
-            Desenvolvedor Full Stack
+            Sou desenvolvedor Full Stack
           </h1>
           <p className="mb-8 leading-relaxed">
-            Pronto para desenvolver aplicações front-end e full stack. Este
+            Pronto para implementar aplicações front-end e full stack. Este
             portifófio tem integração com o back-end que me permite armazenar as
             mensagens enviadas pelo formulário de contato.
           </p>
