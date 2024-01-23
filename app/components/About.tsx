@@ -34,9 +34,10 @@ const About = () => {
         </div>
         <div className="w-5/6 md:w-1/2 lg:w-full lg:max-w-lg">
           <Image
-            className="rounded object-cover object-center"
+            className="h-[300px] w-[450px] rounded object-cover object-center"
             alt="hero"
-            src="./coding.svg"
+            src="./full-stack-web-developer.svg"
+            priority={true}
             width={450}
             height={300}
           />

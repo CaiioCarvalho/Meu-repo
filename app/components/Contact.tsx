@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { useFormState } from 'react-dom'
+import { useFormState, useFormStatus } from 'react-dom'
 import { newMessage } from '../lib/actions'
 
 export default function Contact() {
@@ -10,6 +10,12 @@ export default function Contact() {
     message: '',
   }
   const [state, dispatch] = useFormState(newMessage, initialState)
+  const { pending, action, data, method } = useFormStatus()
+  if (pending === true) {
+    console.log(
+      `${pending} pending --- ${action} action --- ${data} data ---- ${method} method -----`,
+    )
+  }
 
   return (
     <form action={dispatch} id="contact" name="contact2" className="relative">
@@ -125,8 +131,9 @@ export default function Contact() {
             </div>
           </div>
           <button
+            disabled={true}
             type="submit"
-            className="rounded border-0 bg-indigo-500 px-6 py-2 text-lg text-white ring-indigo-500 hover:bg-indigo-600 focus:outline-none active:ring-2"
+            className="rounded border-0 bg-indigo-500 px-6 py-2 text-lg text-white ring-indigo-500 hover:bg-indigo-600 focus:outline-none active:ring-2 disabled:animate-pulse disabled:cursor-not-allowed disabled:bg-indigo-700 disabled:text-transparent"
           >
             Submit
           </button>
